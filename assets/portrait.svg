@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 550" width="440" height="550" role="img" aria-label="Portrait placeholder">
+  <!-- Transparent background on purpose: the themed surface behind it shows
+       through, so this placeholder looks right in both light and dark mode. -->
+  <g fill="#8b93a1" opacity="0.38">
+    <circle cx="220" cy="196" r="76"/>
+    <path d="M220 292c78 0 142 54 142 121v67H78v-67c0-67 64-121 142-121z"/>
+  </g>
+  <text x="220" y="522" fill="#8b93a1" font-family="system-ui, sans-serif" font-size="17" text-anchor="middle">Your photo here</text>
+</svg>

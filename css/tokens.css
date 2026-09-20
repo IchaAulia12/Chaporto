@@ -1,0 +1,174 @@
+/* ==========================================================================
+   tokens.css — YOUR DESIGN LIVES HERE
+
+   This is the only file you need to touch to restyle the whole site.
+   Every colour, font, size and spacing value used anywhere in the CSS
+   points back to a variable defined below.
+
+   Change a value here -> it changes everywhere, consistently.
+   ========================================================================== */
+
+:root {
+  /* ------------------------------------------------------------------
+     1. RAW PALETTE
+     Your actual brand colours. Nothing else in the site hardcodes a colour.
+     ------------------------------------------------------------------ */
+  --white: #ffffff;
+  --black: #0b0c0f;
+
+  --grey-50: #f7f8fa;
+  --grey-100: #eef0f4;
+  --grey-200: #e0e3e9;
+  --grey-400: #9aa2b1;
+  --grey-600: #5b6472;
+  --grey-800: #23272f;
+  --grey-900: #14171c;
+
+  --brand-400: #7f9bff;
+  --brand-500: #2f5bff;
+  --brand-600: #1d43e0;
+
+  /* ------------------------------------------------------------------
+     2. SEMANTIC COLOURS (light theme)
+     Use these in your CSS, not the raw palette above.
+     ------------------------------------------------------------------ */
+  --color-bg: var(--white);
+  --color-surface: var(--grey-50);
+  --color-surface-2: var(--grey-100);
+  --color-border: var(--grey-200);
+  --color-text: var(--grey-900);
+  --color-text-muted: var(--grey-600);
+  --color-accent: var(--brand-500);
+  --color-accent-hover: var(--brand-600);
+  --color-on-accent: var(--white);
+  --color-focus: var(--brand-500);
+
+  /* Dark theme values, defined once and mapped further down.
+     Edit these to change dark mode. */
+  --dark-bg: #0e1014;
+  --dark-surface: #16191f;
+  --dark-surface-2: #1d212a;
+  --dark-border: #2a2f39;
+  --dark-text: #eceff4;
+  --dark-text-muted: #a3abb8;
+  --dark-accent: var(--brand-400);
+  --dark-accent-hover: #9db2ff;
+  --dark-on-accent: #0e1014;
+
+  /* ------------------------------------------------------------------
+     3. TYPOGRAPHY
+     Default is the system font stack: zero download, instant render.
+     To use a custom font, add it to the front of --font-sans and load it
+     in the <head> of each page (see README).
+     ------------------------------------------------------------------ */
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
+    monospace;
+
+  /* Fluid type scale: grows with the viewport, no media queries needed.
+     clamp(minimum, preferred, maximum) */
+  --text-xs: clamp(0.78rem, 0.76rem + 0.1vw, 0.84rem);
+  --text-sm: clamp(0.88rem, 0.85rem + 0.12vw, 0.95rem);
+  --text-base: clamp(1rem, 0.97rem + 0.15vw, 1.08rem);
+  --text-lg: clamp(1.13rem, 1.07rem + 0.28vw, 1.3rem);
+  --text-xl: clamp(1.33rem, 1.22rem + 0.5vw, 1.65rem);
+  --text-2xl: clamp(1.6rem, 1.4rem + 0.9vw, 2.15rem);
+  --text-3xl: clamp(1.95rem, 1.6rem + 1.6vw, 2.9rem);
+  --text-4xl: clamp(2.35rem, 1.75rem + 2.8vw, 4rem);
+
+  --leading-tight: 1.15;
+  --leading-snug: 1.35;
+  --leading-normal: 1.65;
+
+  --weight-normal: 400;
+  --weight-medium: 500;
+  --weight-bold: 700;
+
+  --tracking-tight: -0.02em;
+  --tracking-wide: 0.08em;
+
+  /* ------------------------------------------------------------------
+     4. SPACING  (consistent rhythm — always use these, never magic numbers)
+     ------------------------------------------------------------------ */
+  --space-3xs: 0.25rem;
+  --space-2xs: 0.5rem;
+  --space-xs: 0.75rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-2xl: 4.5rem;
+  --space-3xl: 7rem;
+
+  /* Vertical padding for a page section — fluid */
+  --section-gap: clamp(3.5rem, 2rem + 7vw, 7rem);
+
+  /* ------------------------------------------------------------------
+     5. SIZING & SHAPE
+     ------------------------------------------------------------------ */
+  --container-width: 68rem; /* max content width  */
+  --container-narrow: 44rem; /* for long-form text */
+  --measure: 68ch; /* comfortable reading line length */
+  --gutter: clamp(1.25rem, 4vw, 2.5rem);
+
+  --radius-sm: 0.375rem;
+  --radius-md: 0.625rem;
+  --radius-lg: 1rem;
+  --radius-pill: 999px;
+
+  --border-width: 1px;
+
+  /* ------------------------------------------------------------------
+     6. ELEVATION & MOTION
+     ------------------------------------------------------------------ */
+  --shadow-sm: 0 1px 2px rgb(11 12 15 / 0.06);
+  --shadow-md: 0 4px 16px -4px rgb(11 12 15 / 0.1);
+  --shadow-lg: 0 16px 40px -12px rgb(11 12 15 / 0.18);
+
+  --duration-fast: 120ms;
+  --duration: 220ms;
+  --ease: cubic-bezier(0.32, 0.72, 0.3, 1);
+
+  --header-height: 4rem;
+}
+
+/* --------------------------------------------------------------------------
+   DARK THEME MAPPING
+   Two blocks: one follows the OS setting, one follows a manual choice made
+   with the theme button (stored in localStorage as data-theme on <html>).
+   You normally don't need to edit these — edit the --dark-* values above.
+   -------------------------------------------------------------------------- */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --color-bg: var(--dark-bg);
+    --color-surface: var(--dark-surface);
+    --color-surface-2: var(--dark-surface-2);
+    --color-border: var(--dark-border);
+    --color-text: var(--dark-text);
+    --color-text-muted: var(--dark-text-muted);
+    --color-accent: var(--dark-accent);
+    --color-accent-hover: var(--dark-accent-hover);
+    --color-on-accent: var(--dark-on-accent);
+    --color-focus: var(--dark-accent);
+    --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.4);
+    --shadow-md: 0 4px 16px -4px rgb(0 0 0 / 0.5);
+    --shadow-lg: 0 16px 40px -12px rgb(0 0 0 / 0.6);
+  }
+}
+
+[data-theme="dark"] {
+  --color-bg: var(--dark-bg);
+  --color-surface: var(--dark-surface);
+  --color-surface-2: var(--dark-surface-2);
+  --color-border: var(--dark-border);
+  --color-text: var(--dark-text);
+  --color-text-muted: var(--dark-text-muted);
+  --color-accent: var(--dark-accent);
+  --color-accent-hover: var(--dark-accent-hover);
+  --color-on-accent: var(--dark-on-accent);
+  --color-focus: var(--dark-accent);
+  --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.4);
+  --shadow-md: 0 4px 16px -4px rgb(0 0 0 / 0.5);
+  --shadow-lg: 0 16px 40px -12px rgb(0 0 0 / 0.6);
+}

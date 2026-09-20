@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Add one <url> block per page you create. If you later move to a custom
+     domain, swap the ichaaulia12.github.io/Chaporto base for your domain. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://ichaaulia12.github.io/Chaporto/</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://ichaaulia12.github.io/Chaporto/work.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ichaaulia12.github.io/Chaporto/about.html</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ichaaulia12.github.io/Chaporto/project.html</loc>
+    <priority>0.6</priority>
+  </url>
+</urlset>

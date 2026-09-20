@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400" role="img" aria-label="Placeholder image">
+  <!-- Transparent background on purpose: the themed surface behind it shows
+       through, so this placeholder looks right in both light and dark mode. -->
+  <g fill="#8b93a1" opacity="0.3">
+    <path d="M0 400 200 240l120 90 130-120 190 150z"/>
+    <circle cx="470" cy="110" r="42"/>
+  </g>
+  <g fill="#8b93a1" font-family="system-ui, sans-serif" text-anchor="middle">
+    <text x="320" y="196" font-size="26" font-weight="700">Project image</text>
+    <text x="320" y="224" font-size="16">Replace with a 1600×1000 screenshot</text>
+  </g>
+</svg>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ichaaulia12.github.io/Chaporto/sitemap.xml
